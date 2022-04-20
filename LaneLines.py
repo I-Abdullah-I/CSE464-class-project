@@ -31,9 +31,9 @@ class LaneLines:
         self.nonzeroy = None
         self.clear_visibility = True
         self.dir = []
-        self.left_curve_img = mpimg.imread('left_turn.png')
-        self.right_curve_img = mpimg.imread('right_turn.png')
-        self.keep_straight_img = mpimg.imread('straight.png')
+        self.left_curve_img = mpimg.imread('assets/left_turn.png')
+        self.right_curve_img = mpimg.imread('assets/right_turn.png')
+        self.keep_straight_img = mpimg.imread('assets/straight.png')
         self.left_curve_img = cv2.normalize(src=self.left_curve_img, dst=None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8U)
         self.right_curve_img = cv2.normalize(src=self.right_curve_img, dst=None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8U)
         self.keep_straight_img = cv2.normalize(src=self.keep_straight_img, dst=None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8U)
