@@ -15,3 +15,9 @@ pip install -r requirements.txt
 ```bash
 ./lane_detection <video_path> <output_video_path>
 ```
+
+## Contributors
+
+Abdullah Ashraf Abdelaty Mohamed 1600765
+Omar Elsayed Mahmoud Elsaeed 1600855
+Mohamed Ahmed Raafat Ayoub 1601105
