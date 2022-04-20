@@ -10,16 +10,17 @@ Options:
 --video                                 process video file instead of image
 """
 
+import os
 import numpy as np
 import matplotlib.image as mpimg
 import cv2
 from docopt import docopt
 from IPython.display import HTML, Video
 from moviepy.editor import VideoFileClip
-from CameraCalibration import CameraCalibration
-from Thresholding import *
-from PerspectiveTransformation import *
-from LaneLines import *
+from helper_functions.CameraCalibration import CameraCalibration
+from helper_functions.Thresholding import *
+from helper_functions.PerspectiveTransformation import *
+from helper_functions.LaneLines import *
 
 class FindLaneLines:
     """ This class is for parameter tunning.
@@ -29,7 +30,7 @@ class FindLaneLines:
     """
     def __init__(self):
         """ Init Application"""
-        self.calibration = CameraCalibration('camera_cal', 9, 6)
+        self.calibration = CameraCalibration(os.path.join(os.getcwd(), 'camera_cal'), 9, 6)
         self.thresholding = Thresholding()
         self.transform = PerspectiveTransformation()
         self.lanelines = LaneLines()
